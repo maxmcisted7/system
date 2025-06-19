@@ -38,3 +38,6 @@ scripts/*.md.mjs
 styles/dist
 components/dist
 dist/
+
+*storybook.log
+storybook-static

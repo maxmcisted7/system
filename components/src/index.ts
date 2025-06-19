@@ -8,3 +8,4 @@
 
 export * from './asciidoc'
 export * from './ui'
+export { SpinnerLoader } from './ui'
