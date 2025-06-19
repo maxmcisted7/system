@@ -1,7 +1,3 @@
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
@@ -18,6 +14,9 @@ const config: StorybookConfig = {
     "options": {}
   },
   viteFinal: async (config) => {
+    const { fileURLToPath } = await import('url');
+    const { dirname, join } = await import('path');
+    const __dirname = dirname(fileURLToPath(import.meta.url));
     config.resolve = config.resolve || {};
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
