@@ -1,17 +1,24 @@
 /*
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, you can obtain one at https://mozilla.org/MPL/2.0/.
+ * Oxide Design System: Listbox Component
+ * This file is part of the Oxide design library. It provides a styled Listbox component for use in UI projects.
  *
- * Copyright Oxide Computer Company
+ * Features:
+ * - Custom styling and error handling
+ * - Integrated loading spinner (SpinnerLoader)
+ * - Uses Headless UI and Floating UI for accessibility and positioning
+ *
+ * Exports:
+ * - Listbox: The main component
+ * - ListboxProps, ListboxItem: Types for usage
  */
+
 import { SelectArrows6Icon } from '@/icons/react'
 import { FloatingPortal, flip, offset, size, useFloating } from '@floating-ui/react'
 import { Listbox as Select } from '@headlessui/react'
 import cn from 'classnames'
 import type { ReactNode } from 'react'
 
-import { SpinnerLoader } from '~/src'
+import { SpinnerLoader } from '../spinner/Spinner'
 
 export type ListboxItem<Value extends string = string> = {
   value: Value
